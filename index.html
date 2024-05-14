@@ -5,57 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>স্মার্ট মূত্র প্রেগন্যান্সি টেস্ট </title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <style>
-    body {
-      background-color: #f8f9fa;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    .container {
-      flex: 1;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .header {
-      background-color: #007bff;
-      color: #fff;
-      padding: 20px;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 28px;
-      text-align: center;
-    }
-
-    .form-group {
-      margin-bottom: 20px;
-    }
-
-    .result-button {
-      border-radius: 10px;
-      min-width: 150px;
-      font-size: 18px;
-    }
-
-    .footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #007bff;
-      color: #fff;
-      border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  
 </head>
 <body>
   <div class="header">
@@ -114,25 +66,6 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script>
-    // Add JavaScript logic here
-    document.getElementById('submitBtn').addEventListener('click', function() {
-      var side1Selection = document.getElementById('side1Dropdown').selectedOptions;
-      var side2Selection = document.getElementById('side2Dropdown').selectedOptions;
-      var report = document.querySelector('input[name="reportRadio"]:checked').value;
-      
-      if (side1Selection.length > 0 && side2Selection.length > 0) {
-        var result = '';
-        if (report === 'Negative') {
-          result = '<button class="btn btn-success result-button">প্রেগন্যান্সি টেস্ট পজিটিভ</button>';
-        } else if (report === 'Positive') {
-          result = '<button class="btn btn-danger result-button">প্রেগন্যান্সি টেস্ট নেগেটিভ</button>';
-        }
-        document.getElementById('result').innerHTML = result;
-      } else {
-        alert('Please select options for both sides.');
-      }
-    });
-  </script>
+  
 </body>
 </html>
